@@ -40,4 +40,3 @@ Variables di Vercel; jangan simpan password ke Git.
 4. Tambahkan klien laptop.
 
 Lihat `agent/instructions.md` untuk aturan penulisan Ainov.
-
