@@ -8,14 +8,14 @@ laptop nantinya memakai API Ainov yang sama.
 - Kerangka Next.js + Eve dan instruksi penulis tersedia.
 - Proyek Vercel `ainov` dibuat pada 30 Oktober 2026.
 - Proteksi SSO Vercel aktif untuk deployment (kecuali domain khusus).
-- Model awal: `openai/gpt-6.1-sol-fast` melalui AI Gateway.
+- Model agen: `anthropic/claude-sonnet-5.5` melalui AI Gateway.
 - UI ruang menulis, percakapan, dan panel akses pribadi sudah dibuat.
 - Akses agen ditutup sampai `AINOV_USERNAME` dan `AINOV_PASSWORD` diatur pada
   Environment Variables Vercel.
 - Repositori GitHub publik `bawaslu-bintan/ainov` tertaut ke proyek Vercel
   `ainov`; branch produksi adalah `main`.
-- Build pertama gagal saat instalasi karena Eve mensyaratkan AI SDK `^7.0.137`;
-  dependensi langsung sudah disesuaikan. Belum ada deployment yang berhasil.
+- Build pertama sempat gagal karena versi AI SDK; dependensi sudah disesuaikan dan
+  build dari source lengkap di GitHub pernah berhasil.
 - Versi paket langsung dipatok di `package.json`; lockfile dan build lokal belum
   dapat dibuat karena registry npm dari lingkungan ini tidak terjangkau.
 
