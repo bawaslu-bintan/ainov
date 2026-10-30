@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEveAgent } from "eve/react";
 import { useEffect, useMemo, useState } from "react";
 import type { FormEvent } from "react";
@@ -85,8 +86,19 @@ export function Workspace() {
         {activeView === "writer" ? (
           <div className="content">
             <div className="intro">
-              <p className="eyebrow">RUANG MENULIS AINOV</p>
-              <h1>Gagasanmu, dirangkai dengan lebih jernih.</h1>
+              <div className="intro-heading">
+                <Image
+                  alt="Logo Ainov"
+                  className="intro-logo"
+                  height={96}
+                  src="/ainov.png"
+                  width={96}
+                />
+                <div>
+                  <p className="eyebrow">RUANG MENULIS AINOV</p>
+                  <h1>Gagasanmu, dirangkai dengan lebih jernih.</h1>
+                </div>
+              </div>
               <p className="intro-copy">Ceritakan apa yang ingin kamu tulis. Kita kembangkan bersama sampai terasa pas.</p>
             </div>
 
@@ -112,7 +124,6 @@ export function Workspace() {
               <span className="prompt-chip">↗ Revisi tulisan</span>
               <span className="prompt-chip">▤ Ringkasan</span>
             </div>
-            <p className="privacy-note">Drafmu tetap milikmu. Ainov akan menjaga fakta dan konteks yang kamu berikan.</p>
           </div>
         ) : (
           <div className="content library-view">
@@ -249,6 +260,7 @@ function WritingChat({
       </div>
 
       <form className="composer" onSubmit={submit}>
+        <p className="model-disclosure">Model NVIDIA gratis dapat mencatat prompt dan jawaban untuk peningkatan produk. Jangan kirim informasi rahasia.</p>
         <textarea
           aria-label="Pesan untuk Ainov"
           onChange={(event) => setDraft(event.target.value)}

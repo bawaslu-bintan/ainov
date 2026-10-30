@@ -1,5 +1,5 @@
 import { defineAgent } from "eve";
 
 export default defineAgent({
-  model: "anthropic/claude-sonnet-5.5",
+  model: "nvidia/nemotron-3.5-lightning-free",
 });

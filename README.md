@@ -8,7 +8,9 @@ laptop nantinya memakai API Ainov yang sama.
 - Kerangka Next.js + Eve dan instruksi penulis tersedia.
 - Proyek Vercel `ainov` dibuat pada 30 Oktober 2026.
 - Proteksi SSO Vercel aktif untuk deployment (kecuali domain khusus).
-- Model agen: `anthropic/claude-sonnet-5.5` melalui AI Gateway.
+- Model agen: `nvidia/nemotron-3.5-lightning-free` melalui AI Gateway.
+- Model gratis NVIDIA dapat mencatat prompt dan jawaban untuk peningkatan
+  produk; jangan gunakan untuk informasi rahasia atau sistem produksi penting.
 - UI ruang menulis, percakapan, dan panel akses pribadi sudah dibuat.
 - Akses agen ditutup sampai `AINOV_USERNAME` dan `AINOV_PASSWORD` diatur pada
   Environment Variables Vercel.
